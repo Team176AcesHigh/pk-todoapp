@@ -7,7 +7,7 @@ interface Props {
     handleAdd: (e: React.FormEvent) => void;
 }
 
-const InputFeild: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
+const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }: Props) => {
     const inputRef = useRef<HTMLInputElement>(null); 
 
     return (
@@ -27,4 +27,4 @@ const InputFeild: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
     );
 }
 
-export default InputFeild;
+export default InputField;
