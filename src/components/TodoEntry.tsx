@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Todo } from "./model"
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 interface TodoEntryProps {
   todo: Todo
@@ -47,7 +48,7 @@ export default function TodoEntry(props: TodoEntryProps): JSX.Element {
             <button onClick={() => {
                 exitEditMode();
             }}>Set new description</button>)}
-          <button onClick={() => props.removeFunction(props.todo.id)}>Remove</button>
+            <DeleteForeverIcon onClick={() => props.removeFunction(props.todo.id)} />
         </div>
     )
 }
